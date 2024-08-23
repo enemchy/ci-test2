@@ -7,6 +7,6 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: enemchy/ci-test1/.github/workflows/reusable-workflow.yml@main
+    uses: enemchy/ci-test1/.github/workflows/blank.yml@main
     with:
       name: "GitHub"
