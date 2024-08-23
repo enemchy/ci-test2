@@ -1,0 +1,12 @@
+name: Use Reusable Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-reusable-workflow:
+    uses: enemchy/ci-test1/.github/workflows/reusable-workflow.yml@main
+    with:
+      name: "GitHub"
