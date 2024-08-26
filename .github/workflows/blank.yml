@@ -8,6 +8,10 @@ on:
     branches:
       - main
   page_build:
+  pull_request:
+    branches:
+      - 'releases/**'
+      - '!releases/**-alpha'
 
 jobs:
   call-reusable-workflow:
