@@ -1,9 +1,13 @@
 name: Use Reusable Workflow
 
 on:
+  label:
+    types:
+      - created
   push:
     branches:
       - main
+  page_build:
 
 jobs:
   call-reusable-workflow:
