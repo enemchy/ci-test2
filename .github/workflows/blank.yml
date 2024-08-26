@@ -1,17 +1,21 @@
 name: Use Reusable Workflow
 
-on:
-  label:
-    types:
-      - created
-  push:
-    branches:
-      - main
-  page_build:
-  pull_request:
-    branches:
-      - 'releases/**'
-      - '!releases/**-alpha'
+run-name: Deploy
+
+permissions: read-all
+
+on: [ push ]
+env:
+  SERVER: production
+
+defaults:
+  run:
+    shell: bash
+    working-directory: ./scripts
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   call-reusable-workflow:
