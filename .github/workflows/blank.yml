@@ -22,6 +22,6 @@ jobs:
     uses: enemchy/ci-test1/.github/workflows/blank.yml@main
     with:
       name: "GitHub"
-  my_second_job:
-    runs-on: ubuntu-latest
-    name: My second job
+  # my_second_job:
+  #   runs-on: ubuntu-latest
+  #   name: My second job
