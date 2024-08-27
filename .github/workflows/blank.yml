@@ -8,17 +8,17 @@ on: [ push ]
 env:
   SERVER: production
 
-defaults:
-  run:
-    shell: bash
-    working-directory: ./scripts
+# defaults:
+#   run:
+#     shell: bash
+#     working-directory: ./scripts
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+# concurrency:
+#   group: ${{ github.workflow }}-${{ github.ref }}
+#   cancel-in-progress: true
 
 jobs:
-  call-reusable-workflow:
+  some-job:
     uses: enemchy/ci-test1/.github/workflows/blank.yml@main
     with:
       name: "GitHub"
